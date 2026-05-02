@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bbr5qv1a5c3yh"]
+
+[ext_resource type="Texture2D" uid="uid://bq1ygchxsuycv" path="res://bullet_hole.png" id="1_rnc8w"]
+
+[node name="Decal" type="Sprite3D" unique_id=793148593]
+transform = Transform3D(0.34092593, 0, 0, 0, 0.34092593, 0, 0, 0, 0.34092593, 0, 0, 0)
+texture = ExtResource("1_rnc8w")

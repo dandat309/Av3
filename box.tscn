@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cu6s4u1iuvw2y"]
+
+[ext_resource type="Script" uid="uid://dkmlytqihq8et" path="res://box.gd" id="1_oq5cr"]
+[ext_resource type="PackedScene" uid="uid://bp71fei2m7hcy" path="res://Crate/crate.fbx" id="2_bqn3j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3n43a"]
+size = Vector3(2.058319, 2.1218567, 2.0256653)
+
+[node name="Box" type="StaticBody3D" unique_id=1874517771]
+script = ExtResource("1_oq5cr")
+
+[node name="crate" parent="." unique_id=1230743069 instance=ExtResource("2_bqn3j")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1222512129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017623901, 1.0446625, -0.03251648)
+shape = SubResource("BoxShape3D_3n43a")

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://d0kqnaudesh6h"]
+
+[ext_resource type="PackedScene" uid="uid://t00ys1rut0nr" path="res://kenney_blocky-characters_20/Models/FBX format/character-n.fbx" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dpjsdn6nm04ka" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dmwocsb22x7er" path="res://ChatGPT Image 1 de mai. de 2026, 18_28_39.png" id="3_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://clpknlpmcbtoy" path="res://desert_eagle/Export/Desert Eagle.fbx" id="4_hqtel"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
+size = Vector3(0.85302734, 2.496582, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=152737555]
+script = ExtResource("1_onrkg")
+
+[node name="character-n" parent="." unique_id=1497062522 instance=ExtResource("1_4flbx")]
+transform = Transform3D(0.7499556, 0, 0, 0, 0.7499556, 0, 0, 0, 0.7499556, 0.005699901, 0.31063843, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2035613163]
+transform = Transform3D(0.7499556, 0, 0, 0, 0.7499556, 0, 0, 0, 0.7499556, 0.017967243, 1.4134173, 0)
+shape = SubResource("BoxShape3D_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1390085275]
+transform = Transform3D(-0.7481233, 0, 0.052392643, 0, 0.7499556, 0, -0.052392643, 0, -0.7481233, 0.044719532, 2.0029433, 0)
+fov = 41.34078
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=1067053196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.2, -1)
+gizmo_extents = 2.0
+
+[node name="TextureRect" type="TextureRect" parent="Camera3D/Marker3D" unique_id=894854948]
+offset_left = 503.0
+offset_top = 216.0
+offset_right = 648.0
+offset_bottom = 398.0
+texture = ExtResource("3_i3pqv")
+expand_mode = 1
+
+[node name="Desert Eagle" parent="Camera3D/Marker3D" unique_id=1172122838 instance=ExtResource("4_hqtel")]
+transform = Transform3D(-0.19598843, 0, -0.013725493, 0, 0.19646847, 0, 0.013725493, 0, -0.19598843, 0.51617885, -0.25391936, -1.2693753)

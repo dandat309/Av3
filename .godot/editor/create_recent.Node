@@ -1,0 +1,12 @@
+AnimatedSprite3D
+CollisionShape3D
+Sprite3D
+Area3D
+CharacterBody3D
+TextureRect
+Control
+StaticBody3D
+Marker3D
+Camera3D
+DirectionalLight3D
+CSGBox3D

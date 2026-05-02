@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b2p6xovuaftkp"]
+
+[ext_resource type="PackedScene" uid="uid://bp71fei2m7hcy" path="res://Crate/crate.fbx" id="1_pjgxn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pjgxn"]
+size = Vector3(2.0499573, 2.0302124, 1.9394531)
+
+[node name="BOX sem dano" type="StaticBody3D" unique_id=462704719]
+
+[node name="crate" parent="." unique_id=1230743069 instance=ExtResource("1_pjgxn")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1599893924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012466431, 1.0414124, 0.0048828125)
+shape = SubResource("BoxShape3D_pjgxn")

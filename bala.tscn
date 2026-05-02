@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://byovr4jhhj8cq"]
+
+[ext_resource type="Script" uid="uid://cby1cl254mvdx" path="res://bala.gd" id="1_ag3k0"]
+[ext_resource type="PackedScene" uid="uid://dlnobrfgn5r2q" path="res://arrow.tscn" id="1_jk513"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ag3k0"]
+size = Vector3(0.21875, 0.18338013, 1.3425598)
+
+[node name="Bala" type="Area3D" unique_id=1894685046]
+script = ExtResource("1_ag3k0")
+
+[node name="Arrow" parent="." unique_id=1772873624 instance=ExtResource("1_jk513")]
+transform = Transform3D(0.61866635, 0, 0, 0, 0.61866635, 0, 0, 0, 0.61866635, -0.055164218, 0, -0.089705795)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=459106638]
+transform = Transform3D(1, 0, 0, 0, 0.98165476, 0, 0, 0, 1, -0.100596555, 0.00021107588, -0.29216003)
+shape = SubResource("BoxShape3D_ag3k0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c4nh5ylqvch1m"]
+
+[ext_resource type="PackedScene" uid="uid://dojik3ep3b8bt" path="res://Slime/Slime.fbx" id="2_1wgrn"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hynts"]
+height = 2.532013
+radius = 1.2944336
+
+[node name="slime danado" type="StaticBody3D" unique_id=952241483]
+
+[node name="Slime" parent="." unique_id=1332936917 instance=ExtResource("2_1wgrn")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=104409856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3642426, 0)
+shape = SubResource("CylinderShape3D_hynts")

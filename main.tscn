@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bwkle560mnyw4"]
+
+[ext_resource type="Texture2D" uid="uid://dtj3bgnfisvoe" path="res://Slime/Textures/SlimeEyes_Texture.png" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://d0kqnaudesh6h" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cu6s4u1iuvw2y" path="res://box.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b2p6xovuaftkp" path="res://box_sem_dano.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c4nh5ylqvch1m" path="res://slime danado.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://c5tr5i2n354ed" path="res://slime_danado.gd" id="6_272bh"]
+[ext_resource type="Script" uid="uid://bqqc0obt0cksx" path="res://slime_danado2.gd" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://byovr4jhhj8cq" path="res://Bala.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bbr5qv1a5c3yh" path="res://decal.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://mleph1h6hs53" path="res://Explosao.tscn" id="10_4c57u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_texture = ExtResource("1_lquwl")
+
+[node name="Main" type="Node3D" unique_id=225516120]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=885945739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02599907, -0.04281807, -0.012318134)
+material_override = SubResource("StandardMaterial3D_272bh")
+use_collision = true
+size = Vector3(50, 1, 50)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2037392734]
+transform = Transform3D(0.7071068, -0.7071068, 0, 0.5, 0.5, 0.7071068, -0.5, -0.5, 0.7071068, 1.8225079, 17.017796, 10.6866255)
+shadow_enabled = true
+shadow_bias = 0.265
+
+[node name="Player" parent="." unique_id=152737555 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(-0.99415094, 0, 0.107999355, 0, 1, 0, -0.107999355, 0, -0.99415094, -0.15822771, 0.89526737, 13.18783)
+
+[node name="Box" parent="." unique_id=1874517771 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.362962, 0.64803934, 0.18924713)
+
+[node name="BOX sem dano" parent="." unique_id=462704719 instance=ExtResource("3_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.729882, 0.5027995, 0)
+
+[node name="slime danado" parent="." unique_id=952241483 instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.822797, 0.54622674, 0)
+script = ExtResource("6_272bh")
+
+[node name="slime danado2" parent="." unique_id=1064505565 instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.594267, 0.54622674, -0.2791276)
+script = ExtResource("7_5vw27")
+
+[node name="Bala" parent="." unique_id=52464373 instance=ExtResource("8_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8375282, -0.8497441, 10.680451)
+visible = false
+
+[node name="Decal" parent="." unique_id=793148593 instance=ExtResource("9_kek77")]
+visible = false
+
+[node name="Explosao" parent="." unique_id=1310520413 instance=ExtResource("10_4c57u")]

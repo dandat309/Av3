@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dlnobrfgn5r2q"]
+
+[ext_resource type="PackedScene" uid="uid://bs8qt7tn80ktx" path="res://arrow.fbx_/Arrow.fbx" id="1_l5ahi"]
+
+[node name="Arrow" unique_id=1772873624 instance=ExtResource("1_l5ahi")]
+
+[node name="Arrow" parent="." index="0" unique_id=1977920201]
+transform = Transform3D(2.651651, 0, 0, 0, 3.0000005, -3.7385087e-06, 0, 1.3113419e-07, 85.52711, 0, 0, -0.1259594)

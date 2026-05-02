@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://pixmkddklus1"]
+
+[ext_resource type="PackedScene" uid="uid://dojik3ep3b8bt" path="res://Slime/Slime.fbx" id="1_2d52u"]
+
+[node name="Slime" unique_id=1332936917 instance=ExtResource("1_2d52u")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1922190873) index="0" unique_id=127594614]
+bones/0/scale = Vector3(0.99934095, 0.8051409, 1)
+bones/1/rotation = Quaternion(-0.253559, -0.6585495, -0.256259, 0.6605693)
+bones/5/rotation = Quaternion(4.48943e-10, -6.7689157e-09, 0.071482636, 0.9974419)
+bones/7/rotation = Quaternion(0.5909219, -0.38834447, -0.5909216, -0.3883446)
